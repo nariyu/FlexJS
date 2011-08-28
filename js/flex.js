@@ -97,14 +97,14 @@ $.fn.flexui = function() {
 		var obj = $(this);
 		var initialized = $.data(this, 'ui-initialized');
 		if (initialized) return;
-		obj.lauoutUI();
+		obj.flexLayout();
 		$(window).resize(function() {
-			obj.lauoutUI();
+			obj.flexLayout();
 		});
 		$.data(this, 'ui-initialized', true);
 	});
 };
-$.fn.lauoutUI = function() {
+$.fn.flexLayout = function() {
 	return this.each(function() {
 		var self = this;
 		doUILayout(this);
